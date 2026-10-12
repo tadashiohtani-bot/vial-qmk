@@ -1,0 +1,25 @@
+name: Build Corne v4.1 Firmware
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Compile Firmware
+        run: |
+          qmk compile -kb crkbd/rev4_1/standard -km vial
+
+      - name: Upload UF2 Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: corne-v4_1-right-firmware
+          path: "*.uf2"
