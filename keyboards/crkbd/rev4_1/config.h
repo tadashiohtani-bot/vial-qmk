@@ -14,3 +14,10 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 #define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
+#undef PRODUCT_ID
+#define PRODUCT_ID 0x0002
+
+#undef PRODUCT
+#define PRODUCT "Corne v4 (Right)"
+
+#define MASTER_RIGHT

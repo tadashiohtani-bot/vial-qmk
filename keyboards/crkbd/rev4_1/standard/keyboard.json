@@ -1,7 +1,7 @@
 {
     "keyboard_name": "Corne v4",
     "usb": {
-        "pid": "0x0004"
+        "pid": "0x0002"
     },
     "rgb_matrix": {
         "split_count": [23, 23],
